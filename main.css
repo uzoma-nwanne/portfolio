@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Prata&display=swap");
+* {
+  box-sizing: border-box; }
+
+/* Description: Main CSS File */
+/******************************
+Table of Contents:
+- Custom Properties
+- Global Rules
+- Components
+- Announcement
+- Header
+- Hero Area
+- Logo Section
+- Portfolio Section
+- Founder Section
+Contact Section
+- Footer
+******************************/
+/**************************/
+/*   Custom Properties   */
+/************************/
+:root {
+  /* Colors */
+  --primary-color: #0a0a0b;
+  --secondary-color: #ffffff;
+  --text-color: #adadad;
+  --accent-color: #2e3038;
+  --btn-bg-color: #fbe850;
+  /* Font */
+  --font-family: "Inter", sans-serif;
+  --header-font: "Prada", sans-serif;
+  /* Padding */ }
+
+/*********************/
+/*   Global Rules   */
+/*******************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-family: var(--font-family);
+  scroll-behavior: smooth; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+p {
+  line-height: 1.5; }
+
+img {
+  max-width: 100%; }
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-right: auto;
+  margin-left: auto; }
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem; } }
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1160px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem; } }
+.backdrop {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--accent-color);
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100; }
+
+header {
+  background-color: var(--primary-color); }
+  header h1 {
+    width: 163px;
+    height: 24px;
+    font-family: Prata;
+    font-size: 18px;
+    text-align: left;
+    color: var(--secondary-color); }
+  header .container {
+    display: flex;
+    justify-content: space-between; }
+  header img {
+    padding: 10px; }
+  header ul {
+    display: none; }
+  header li {
+    color: var(--secondary-color);
+    padding: 10px;
+    font-family: Inter, sans-serif;
+    font-size: 18px; }
+  header a:active, header a:hover {
+    color: var(--text-color); }
+  @media (min-width: 1200px) {
+    header ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+    header img {
+      display: none; } }
+
+.mobile-nav {
+  display: none;
+  width: 80vw;
+  height: 100vh;
+  z-index: 101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color); }
+
+.mobile-nav__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 100%; }
+  .mobile-nav__items li {
+    font-family: Inter;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: var(--secondary-color); }
+
+.open {
+  display: block !important; }
+
+.hero-area {
+  background-color: var(--primary-color); }
+  .hero-area h1 {
+    width: 388px;
+    height: 147px;
+    flex-grow: 0;
+    font-family: Prata;
+    font-weight: normal;
+    font-size: 36px;
+    text-align: left;
+    color: var(--secondary-color); }
+  .hero-area p {
+    width: 384px;
+    height: 108px;
+    flex-grow: 0;
+    margin-top: -20px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #adadad; }
+  @media (min-width: 768px) {
+    .hero-area h1 {
+      width: 675px;
+      font-size: 56px; }
+    .hero-area p {
+      width: 665px; } }
+
+.logo-section {
+  background-color: var(--primary-color); }
+  .logo-section .container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem; }
+    .logo-section .container .visa, .logo-section .container .samsung, .logo-section .container .verizon {
+      padding-left: 20px; }
+  @media (min-width: 768px) {
+    .logo-section .container {
+      grid-template-columns: 30% 30% 30%; } }
+  @media (min-width: 1200px) {
+    .logo-section .container {
+      grid-template-columns: auto auto auto auto auto auto; } }
+
+.portfolio-section {
+  background-color: var(--primary-color); }
+  .portfolio-section .spense, .portfolio-section .yelp {
+    display: flex;
+    flex-direction: column; }
+    .portfolio-section .spense img, .portfolio-section .yelp img {
+      margin: 10px 0; }
+    .portfolio-section .spense h2, .portfolio-section .yelp h2 {
+      width: 350px;
+      height: 49px;
+      flex-grow: 0;
+      font-family: Prata;
+      font-size: 36px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: var(--secondary-color);
+      margin: 10px 0; }
+    .portfolio-section .spense p, .portfolio-section .yelp p {
+      width: 420px;
+      height: 135px;
+      flex-grow: 0;
+      font-family: Inter;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: left;
+      color: var(--text-color);
+      margin-bottom: 30px; }
+  @media (min-width: 768px) {
+    .portfolio-section .spense p, .portfolio-section .yelp p {
+      width: 520px; } }
+  @media (min-width: 1200px) {
+    .portfolio-section .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; } }
+
+.founder-section {
+  background-color: var(--accent-color); }
+  .founder-section .founder-section__text--left, .founder-section .founder-section__text--right {
+    padding: 1rem 0; }
+  .founder-section h2 {
+    width: 360px;
+    flex-grow: 0;
+    font-family: Prata;
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--secondary-color); }
+  .founder-section p {
+    width: 360px;
+    flex-grow: 0;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: var(--text-color);
+    margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .founder-section h2 {
+      width: 708px; }
+    .founder-section p {
+      width: 708px; } }
+  @media (min-width: 1200px) {
+    .founder-section .founder-section__text {
+      display: flex;
+      justify-content: space-between; }
+      .founder-section .founder-section__text p, .founder-section .founder-section__text h2 {
+        width: 520px; } }
+
+.contact {
+  background-color: var(--primary-color); }
+  .contact h2 {
+    width: 370px;
+    flex-grow: 0;
+    font-family: Prata;
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--secondary-color); }
+  .contact p {
+    width: 370px;
+    flex-grow: 0;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--text-color); }
+  .contact button {
+    width: 170px;
+    height: 56px;
+    flex-grow: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background-color: var(--btn-bg-color); }
+  @media (min-width: 768px) {
+    .contact h2 {
+      width: 560px; }
+    .contact p {
+      width: 530px; } }
+
+footer {
+  background-color: var(--accent-color); }
+  footer .container {
+    display: flex;
+    justify-content: space-between; }
+    footer .container p {
+      width: 163px;
+      font-family: Prata;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: var(--secondary-color); }
+
+/*# sourceMappingURL=main.css.map */
